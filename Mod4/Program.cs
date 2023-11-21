@@ -22,6 +22,30 @@
             var inv = true;
             var result = !inv;
             Console.WriteLine(result);
+
+            //Задание 4.1.16
+            Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+            var color = Console.ReadLine();
+
+            if (color == "red")
+            {
+                Console.BackgroundColor = ConsoleColor.Red;
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine("Ваш цвет красный");
+            }
+
+            else if (color == "green")
+            {
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine("Ваш цвет зеленый");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Cyan;
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.WriteLine("Ваш цвет бирюзовый");
+            }
         }
     }
 }
