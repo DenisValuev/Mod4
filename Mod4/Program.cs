@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // Задание 4.1.4
+            string A = "abc";
+            string B = "cba";
+            Boolean C = A != B;
+            Console.WriteLine(C);
         }
     }
 }
