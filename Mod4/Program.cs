@@ -17,6 +17,11 @@
             double Y = 1;
             bool C1 = A1 < B1 | X > Y;
             Console.WriteLine("Задание 4.1.5 Ответ: {0}", C1);
+
+            //Задание 4.1.10
+            var inv = true;
+            var result = !inv;
+            Console.WriteLine(result);
         }
     }
 }
