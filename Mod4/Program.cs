@@ -228,6 +228,21 @@
                 }
             }
             Console.WriteLine("Наименьший элемент массива имеет индекс {0}, значение этого элемента = {1}", minIndex + 1, numbers[minIndex]);
+
+            //Представление строк как массив
+
+            Console.WriteLine("Введите свое имя");
+            string name = Console.ReadLine();
+            Console.WriteLine("Ваше имя по буквам:");
+            for(int l = 0; l < name.Length; l++)
+            {
+                Console.Write("{0} ", name[l]);
+                if (name.Length == l+1)
+                {
+                    Console.WriteLine("последняя буква вашего имени: {0}", name[l]);
+                }
+            }
+            
         }
     }
 }
