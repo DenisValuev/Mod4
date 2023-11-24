@@ -252,8 +252,19 @@
             {
                 Console.Write("{0}", myName[n]);
             }
-           
+            Console.WriteLine();
+            //Двумерный массив в foreach
+
+            int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
+            foreach(var item in array)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine("\nДлина массива: {0}", array.Length);
+            Console.WriteLine("Колличество строк: {0}", array.GetUpperBound(0) + 1 + " ");
+            Console.WriteLine("Количество колонок: {0}", array.GetUpperBound(1) + 1 + " ");
             
+
         }
     }
 }
