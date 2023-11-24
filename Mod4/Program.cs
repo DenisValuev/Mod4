@@ -242,6 +242,17 @@
                     Console.WriteLine("последняя буква вашего имени: {0}", name[l]);
                 }
             }
+
+            // Задание 4.3.7 Обратный порядок букв в имени
+
+            Console.Write("Введите Ваше имя: ");
+            var myName = Console.ReadLine();
+            Console.Write("Ваше имя в обратном порядке: ");
+            for (int n = myName.Length -1; n > -1; n--)
+            {
+                Console.Write("{0}", myName[n]);
+            }
+           
             
         }
     }
