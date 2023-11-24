@@ -215,6 +215,19 @@
                         break;
                 }
             }
+            //Нахождение наименьшего числа в массиве
+            var numbers = new[] { 6, 30, 14, 2, 15 };
+            var minValue = 10000;
+            var minIndex = -1;
+            for (int ind = 0; ind < numbers.Length; ind++)
+            {
+                if (numbers[ind] < minValue)
+                {
+                    minValue = numbers[ind];
+                    minIndex = ind;
+                }
+            }
+            Console.WriteLine("Наименьший элемент массива имеет индекс {0}, значение этого элемента = {1}", minIndex + 1, numbers[minIndex]);
         }
     }
 }
