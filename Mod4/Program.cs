@@ -263,8 +263,52 @@
             Console.WriteLine("\nДлина массива: {0}", array.Length);
             Console.WriteLine("Колличество строк: {0}", array.GetUpperBound(0) + 1 + " ");
             Console.WriteLine("Количество колонок: {0}", array.GetUpperBound(1) + 1 + " ");
-            
 
+            // Задание 4.3.11 Вывод двумерного массива, перебор со столбца
+            
+            int[,] array1 = { { 1, 2, 3}, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13} };
+            for (int i1 = 0; i1 < array1.GetUpperBound(1) + 1; i1++)
+            {
+                for (int k1 = 0; k1 < array1.GetUpperBound(0) + 1; k1++)
+                {
+                    Console.Write(array1[k1,i1] + " ");
+                }
+                Console.WriteLine();
+            }
+            // Задание 4.3.12 Сортировка одномерного массива
+
+            Console.WriteLine("Сортировка массива");
+            Console.ReadKey();
+            //int[] array2 = { 5, 6, 9, 1, 2, 3, 4 };
+            int[] array2 = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 };
+            int temp;
+            for (
+                
+                int i2 = 0; i2 < array2.Length;)
+            {
+                if (i2 + 1 == array2.Length)
+                {
+                    i2++;
+                    continue;
+                }
+                if (array2[i2] > array2[i2 + 1])
+                {
+                    temp = array2[i2];
+                    array2[i2] = array2[i2 + 1];
+                    array2[i2 + 1] = temp;
+                    i2 = 0;
+                }
+                else
+                {
+                    i2++;
+                }
+            }
+            Console.WriteLine("Отсортированный массив: ");
+            for (int i3 = 0; i3 < array2.Length; i3++)
+            {
+                Console.Write(array2[i3] + " " + ""); 
+            }
+            
         }
     }
 }
