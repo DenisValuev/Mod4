@@ -397,6 +397,26 @@ namespace Mod4
                 }
                 Console.WriteLine();
             }
+
+            // Задание 4.4.2 Кортеж
+            Console.WriteLine("Кортеж");
+            (string name, int age) anketa;
+            Console.Write("Введите Ваше имя: ");
+            anketa.name = Console.ReadLine();
+            Console.Write("Введите ваш возраст:");
+            anketa.age = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ваше имя: {0}\nВаш возраст: {1}",anketa.name, anketa.age);
+
+            //Задание 4.4.3 Кортеж без имени
+
+            var (name1, age1) = ("Евгения", 27);
+            Console.WriteLine("Ваше имя: {0}\nВаш возраст: {1}", name1, age1);
+            Console.Write("Введите Ваше имя: ");
+            name1 = Console.ReadLine();
+            Console.Write("Введите ваш возраст:");
+            age1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Ваше имя: {0}\nВаш возраст: {1}", name1, age1);
+
         }
     }
 }
