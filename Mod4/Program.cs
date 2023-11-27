@@ -306,7 +306,17 @@
             {
                 Console.Write(array2[i3] + " " + ""); 
             }
-            
+
+            //Задание 4.3.13 Сумма элементов массива
+
+            Console.WriteLine("\nЗадание 4.3.13 Сумма элементов массива");
+            var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+            var sumArr = 0;
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sumArr = sumArr + arr[i];
+            }
+            Console.WriteLine("Сумма элементов массива равна: {0}", sumArr);
         }
     }
 }
