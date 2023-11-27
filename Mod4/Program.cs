@@ -417,6 +417,24 @@ namespace Mod4
             age1 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Ваше имя: {0}\nВаш возраст: {1}", name1, age1);
 
+            //Задание 4.4.5 Анкета питомца
+
+            (string Name, string Type, double Age, int NameCount) Pet;
+            Pet.NameCount = 0;
+            Console.Write("Введите имя петомца: ");
+            Pet.Name = Console.ReadLine();
+            Console.Write("Введите тип питомца: ");
+            Pet.Type = Console.ReadLine();
+            Console.WriteLine("введите возраст питомца: ");
+            Pet.Age = Convert.ToDouble(Console.ReadLine());
+            for (int i = 0; i < Pet.Name.Length; i++)
+            {
+                Pet.NameCount++;
+            }
+            Console.WriteLine("Анкета питомца");
+            Console.WriteLine("Имя: {0}\nТип: {1}\nВозраст: {2}", Pet.Name, Pet.Type, Pet.Age);
+            Console.WriteLine("Длина имени питомца: {0}", Pet.NameCount);
+
         }
     }
 }
