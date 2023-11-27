@@ -1,4 +1,6 @@
-﻿namespace Mod4
+﻿using System.Security.Cryptography;
+
+namespace Mod4
 {
     internal class Program
     {
@@ -351,7 +353,7 @@
 
             //Задание 4.3.16 Количество положительных чисев в двумерном массиве
 
-            int[,] array5 = { { -5, 6, 9, 1, 2, 3 }, { -8, 8, 1, 1, 2, -3 } };
+            int[,] array5 = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
             int num1 = 0;
             for (int i = 0; i < array5.GetUpperBound(0) + 1; i++)
             {
@@ -366,6 +368,35 @@
                 Console.WriteLine() ;
             }
             Console.WriteLine("Количество положительных чисел в двумерном массиве: {0}", num1);
+
+            // Задание 4.3.17 Сортировка двумерного массива внутри одной строки
+
+            Console.WriteLine("Отсортированный двумерный массив");
+
+            int temp1;
+            for (int i = 0; i < array5.GetUpperBound(0) + 1; i++)
+            {
+                for (int j = 0; j < array5.GetUpperBound(1) + 1; j++)
+                {
+                    for (int h = j + 1; h < array5.GetUpperBound(1) + 1; h++)
+                    {
+                        if (array5[i, j] > array5[i, h])
+                        {
+                            temp1 = array5[i, j];
+                            array5[i,j] = array5[i,h];
+                            array5[i,h] = temp1;
+                        }
+                    }
+                }
+            }
+            for (int i = 0; i < array5.GetUpperBound(0) + 1; i++)
+            {
+                for (int j = 0; j < array5.GetUpperBound(1) + 1; j++)
+                {
+                    Console.Write(array5[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
