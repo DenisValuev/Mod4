@@ -348,6 +348,24 @@
                 }
             }
             Console.WriteLine("Количество положительных чисел в массиве: {0}", num);
+
+            //Задание 4.3.16 Количество положительных чисев в двумерном массиве
+
+            int[,] array5 = { { -5, 6, 9, 1, 2, 3 }, { -8, 8, 1, 1, 2, -3 } };
+            int num1 = 0;
+            for (int i = 0; i < array5.GetUpperBound(0) + 1; i++)
+            {
+                for (int j = 0; j < array5.GetUpperBound(1) + 1; j++) 
+                {
+                    if (array5[i, j] > 0)
+                    {
+                        num1++;
+                    }
+                    Console.Write(array5[i, j] + " ");
+                }
+                Console.WriteLine() ;
+            }
+            Console.WriteLine("Количество положительных чисел в двумерном массиве: {0}", num1);
         }
     }
 }
