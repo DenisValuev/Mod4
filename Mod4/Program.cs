@@ -317,6 +317,25 @@
                 sumArr = sumArr + arr[i];
             }
             Console.WriteLine("Сумма элементов массива равна: {0}", sumArr);
+
+            //Задание 4.3.14 Перебор зубчатого массива
+
+            Console.WriteLine("Задание 4.3.14 Перебор зубчатого массива");
+
+            int[][] array3 = new int[3][];
+            array3[0] = new int[2] { 1, 2};
+            array3[1] = new int[3] { 1, 2, 3 };
+            array3[2] = new int[5] { 1, 2, 3, 4, 5};
+
+            for (int i = 0; i < array3.Length; i++)
+            {
+                for (int j = 0; j < array3[i].Length; j++)
+                {
+                    Console.Write(array3[i][j] + " ");
+                } 
+                Console.WriteLine(); 
+            }    
+
         }
     }
 }
