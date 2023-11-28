@@ -435,6 +435,48 @@ namespace Mod4
             Console.WriteLine("Имя: {0}\nТип: {1}\nВозраст: {2}", Pet.Name, Pet.Type, Pet.Age);
             Console.WriteLine("Длина имени питомца: {0}", Pet.NameCount);
 
+            //Практикум
+            //Задание 4.5.1
+            (string Name, string Surname, string Login, int LoginLength, bool HasPet, double Age, string[] favcolors) User;
+
+            //Задание 4.5.6
+            for (int j = 0; j < 3; j++)
+            {
+                //Задание 4.5.2
+                Console.Write("Введите имя: ");
+                User.Name = Console.ReadLine();
+                Console.Write("Введите фамилию: ");
+                User.Surname = Console.ReadLine();
+                Console.Write("Введите логин: ");
+                User.Login = Console.ReadLine();
+
+                //Задание 4.5.3 Длина логина
+                User.LoginLength = User.Login.Length;
+
+                //Задание 4.5.4
+                Console.WriteLine("Есть ли у Вас питомец? Да или Нет: ");
+                var hsPets = Console.ReadLine();
+                if (hsPets == "Да")
+                {
+                    User.HasPet = true;
+                }
+                else
+                {
+                    User.HasPet = false;
+                }
+
+                //Задание 4.5.5
+                Console.Write("Введите возвраст пользователя: ");
+                User.Age = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Введите три вашил любимых цвета: ");
+                User.favcolors = new string[3];
+                for (int i = 0; i < User.favcolors.Length; i++)
+                {
+                    Console.Write("Цвет №{0}", i + 1);
+                    User.favcolors[i] = Console.ReadLine();
+                }
+
+            }            
         }
     }
-}
+}; 
